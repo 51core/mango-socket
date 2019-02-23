@@ -1,8 +1,6 @@
 ﻿using System;
 using System.IO;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Mango.Network.Core.Common;
 using Mango.Network.Core.MSocket;
 namespace Mango.Network.Server
 {
@@ -14,10 +12,6 @@ namespace Mango.Network.Server
         {
             try
             {
-                //服务注入容器初始化
-                IServiceCollection services = new ServiceCollection();
-                //注册到服务管理
-                ServiceContext.RegisterServices(services);
                 //配置文件处理
                 _configuration = Configuration.SetBasePath(Directory.GetCurrentDirectory())
                     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
