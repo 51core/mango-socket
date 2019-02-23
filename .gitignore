@@ -3,3 +3,11 @@
 ################################################################################
 
 /.vs
+/src/Mango.Network/.vs
+/src/Mango.Network/Mango.Network.Core/bin/Debug/netcoreapp2.2
+/src/Mango.Network/Mango.Network.Core/obj
+/src/Mango.Network/Mango.Network.Server/bin/Debug/netcoreapp2.2
+/src/Mango.Network/Mango.Network.Server/obj
+/src/Mango.Network.Demo/.vs
+/src/Mango.Network.Demo/Mango.Network.Client/bin/Debug/netcoreapp2.2
+/src/Mango.Network.Demo/Mango.Network.Client/obj
