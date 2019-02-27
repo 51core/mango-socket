@@ -26,8 +26,8 @@ namespace Mango.Network.Core.MSocket
                 //调用消息处理事件
                 _eventManager.OnReceive(userToken);
                 Array.Clear(e.Buffer,0, e.BytesTransferred);
-
-                if (!sock.ReceiveAsync(userToken.ReceiveEventArgs))//为接收下一段数据，投递接收请求，这个函数有可能同步完成，这时返回false，并且不会引发SocketAsyncEventArgs.Completed事件
+                //为接收下一段数据，投递接收请求，这个函数有可能同步完成，这时返回false，并且不会引发SocketAsyncEventArgs.Completed事件
+                if (!sock.ReceiveAsync(userToken.ReceiveEventArgs))
                 {
                     //同步接收时处理接收完成事件
                     ProcessReceive(userToken.ReceiveEventArgs); 
